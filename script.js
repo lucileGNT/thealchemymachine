@@ -2,6 +2,7 @@ angular.module('DemoApp', [])
 .controller('MainCtrl', function($http,$scope) {
 	this.ingredients = [];
 	this.selectedIngredients = [];
+	this.recipes = [];
 
 	var self = this;
 	$http.get('./ingredients.json').then(function(response) {
@@ -16,7 +17,7 @@ angular.module('DemoApp', [])
 		if(id != false){
 	    	self.selectedIngredients.push(id);
 	    	myStyle={color:'red'};
-	    	$(".selection").append("<div>"+id+"</div>")
+	    	$(".selection").append("<div>"+self.ingredients[id-1].name+"</div>");
 	    }else{
 	    	var result = document.getElementsByClassName(".ingredient");
 	    	$(".ingredient div").css('color','black');
@@ -29,6 +30,10 @@ angular.module('DemoApp', [])
 	$scope.showButton = function(){
 		if (self.selectedIngredients.length == 3){
 			return true;
+		}else if (self.selectedIngredients.length > 3){
+			self.selectedIngredients = [];
+	    	$(".ingredient div").css('color','black');
+	    	$(".selection").html("");
 		}else{
 			return false;
 		}
