@@ -1,0 +1,18 @@
+{
+  "recipes": [
+    {
+      "id":"1",
+      "name": "Filtre d'invisibilité",
+      "ingredients" : "1,2,3"
+    },
+    {
+      "id":"2",
+      "name": "Filtre d'amour",
+      "ingredients": "1,4,5"
+    },
+    {
+      "id":"3",
+      "name": "Potion magique",
+      "ingredients": "4,8,9"
+    }]
+}

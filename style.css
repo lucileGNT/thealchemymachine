@@ -1,0 +1,36 @@
+
+.container{
+	width:100%;
+}
+
+.ingredient{
+	float: left;
+	font-weight : bold;
+	width : 20%;
+	cursor : pointer;
+}
+
+.col1{
+	width:60%;
+	float:left;
+	padding-right:60px;
+}
+
+.col2{
+
+	width:40%;
+	float:right;
+}
+
+img{
+	width:75px;
+	height:75px;
+}
+
+.button{
+	padding-top:20px;
+	clear:left;
+}
+
+
+
